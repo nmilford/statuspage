@@ -32,3 +32,7 @@
 [[constraint]]
   name = "gopkg.in/go-playground/validator.v8"
   version = "8.18.2"
+
+[[constraint]]
+  name = "github.com/itsjamie/gin-cors"
+  version = "1.0.0"

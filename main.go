@@ -5,7 +5,9 @@ import (
 	"github.com/eirsyl/statuspage/src/routes"
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
+	"github.com/itsjamie/gin-cors"
 	"github.com/go-pg/pg"
+	"time"
 	"log"
 	"net/http"
 	"os"
@@ -21,6 +23,16 @@ func main() {
 	router := gin.Default()
 	router.Use(State())
 
+	router.Use(cors.Middleware(cors.Config{
+		Origins:        "*",
+		Methods:        "GET, PUT, POST, DELETE",
+		RequestHeaders: "Origin, Authorization, Content-Type",
+		ExposedHeaders: "",
+		MaxAge: 50 * time.Second,
+		Credentials: true,
+		ValidateHeaders: false,
+	}))
+
 	binding.Validator.RegisterValidation("incidentstatus", src.IncidentStatus)
 	binding.Validator.RegisterValidation("servicestatus", src.ServiceStatus)
 
@@ -35,7 +47,7 @@ func main() {
 		api.GET("/services", routes.ServiceList)
 		api.POST("/services", routes.ServicePost)
 		api.GET("/services/:id", routes.ServiceGet)
-		api.PATCH("/services/:id", routes.ServicePatch)
+		api.PUT("/services/:id", routes.ServicePatch)
 		api.DELETE("/services/:id", routes.ServiceDelete)
 
 		api.GET("/incidents", routes.IncidentList)

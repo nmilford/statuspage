@@ -2,74 +2,136 @@
 
 
 [[projects]]
+  digest = "1:9785c420b2b502f93de1ba1c3e0b94d116bd325d5f9669484b32bc517cf088b0"
+  name = "github.com/eirsyl/statuspage"
+  packages = [
+    "src",
+    "src/routes",
+  ]
+  pruneopts = ""
+  revision = "5de436d160e5092dae1f569d37f06923101f35ba"
+  version = "0.0.1"
+
+[[projects]]
   branch = "master"
+  digest = "1:1120f960f5c334f0f94bad29eefaf73d52d226893369693686148f66c1993f15"
   name = "github.com/gin-contrib/sse"
   packages = ["."]
+  pruneopts = ""
   revision = "22d885f9ecc78bf4ee5d72b937e4bbcdc58e8cae"
 
 [[projects]]
   branch = "master"
+  digest = "1:9bfbb76cf9ffdbc8e522f86fa312d8d3196c62aa1232c62584bca9aa095573c4"
   name = "github.com/gin-gonic/gin"
-  packages = [".","binding","json","render"]
+  packages = [
+    ".",
+    "binding",
+    "json",
+    "render",
+  ]
+  pruneopts = ""
   revision = "b8b68314faa067acae5b17c828127b04af51ebe2"
 
 [[projects]]
+  digest = "1:52ec23fd83bd29bc90da5fed8999c6112f28486ab9011ce0c94b26b9cb49b611"
   name = "github.com/go-pg/pg"
-  packages = [".","internal","internal/parser","internal/pool","orm","types"]
+  packages = [
+    ".",
+    "internal",
+    "internal/parser",
+    "internal/pool",
+    "orm",
+    "types",
+  ]
+  pruneopts = ""
   revision = "91966ca9a74c1dc62ec494975fd594889907cd33"
   version = "v6.6.1"
 
 [[projects]]
   branch = "master"
+  digest = "1:27854310d59099f8dcc61dd8af4a69f0a3597f001154b2fb4d1c41baf2e31ec1"
   name = "github.com/golang/protobuf"
   packages = ["proto"]
+  pruneopts = ""
   revision = "130e6b02ab059e7b717a096f397c5b60111cae74"
 
 [[projects]]
+  digest = "1:a6f8bd7af0a9c42d0f991e10787b91f25c062d1a016b68264de482bf4d89acc2"
+  name = "github.com/itsjamie/gin-cors"
+  packages = ["."]
+  pruneopts = ""
+  revision = "97b4a9da79331dfa2b6d35f4cdd1e50f5148859c"
+  version = "1.0.0"
+
+[[projects]]
   branch = "master"
+  digest = "1:a0c0f06f12f4b83b89eec79114265c54e9e300b8ddda0f0f3fb49a685283fa6c"
   name = "github.com/jinzhu/inflection"
   packages = ["."]
+  pruneopts = ""
   revision = "1c35d901db3da928c72a72d8458480cc9ade058f"
 
 [[projects]]
+  digest = "1:674f4d8ef8622e4f61991a6ebddec7722e5c026c286606a7f05f21d86b4d91fa"
   name = "github.com/json-iterator/go"
   packages = ["."]
+  pruneopts = ""
   revision = "6ed27152e0428abfde127acb33b08b03a1e67cac"
   version = "1.0.2"
 
 [[projects]]
+  digest = "1:78229b46ddb7434f881390029bd1af7661294af31f6802e0e1bedaad4ab0af3c"
   name = "github.com/mattn/go-isatty"
   packages = ["."]
+  pruneopts = ""
   revision = "0360b2af4f38e8d38c7fce2a9f4e702702d73a39"
   version = "v0.0.3"
 
 [[projects]]
   branch = "master"
+  digest = "1:6c2dd6300fe09b324487d1f11205ecb9a8f6ae7be14fb8d1ed1f0b6f964a2842"
   name = "github.com/ugorji/go"
   packages = ["codec"]
+  pruneopts = ""
   revision = "54210f4e076c57f351166f0ed60e67d3fca57a36"
 
 [[projects]]
   branch = "master"
+  digest = "1:e9f555036bb1a2f61074131371313348581fa1b643c0e5f8c0a436bf7ce6db69"
   name = "golang.org/x/sys"
   packages = ["unix"]
+  pruneopts = ""
   revision = "314a259e304ff91bd6985da2a7149bbf91237993"
 
 [[projects]]
+  digest = "1:dd549e360e5a8f982a28c2bcbe667307ceffe538ed9afc7c965524f1ac285b3f"
   name = "gopkg.in/go-playground/validator.v8"
   packages = ["."]
+  pruneopts = ""
   revision = "5f1438d3fca68893a817e4a66806cea46a9e4ebf"
   version = "v8.18.2"
 
 [[projects]]
   branch = "v2"
+  digest = "1:81314a486195626940617e43740b4fa073f265b0715c9f54ce2027fee1cb5f61"
   name = "gopkg.in/yaml.v2"
   packages = ["."]
+  pruneopts = ""
   revision = "eb3733d160e74a9c7e442f435eb3bea458e1d19f"
 
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "4544073386bd8b7f1b7dac2351ee8b7e0aae1d8e408659078e4361597e6bd84e"
+  input-imports = [
+    "github.com/eirsyl/statuspage/src",
+    "github.com/eirsyl/statuspage/src/routes",
+    "github.com/gin-gonic/gin",
+    "github.com/gin-gonic/gin/binding",
+    "github.com/go-pg/pg",
+    "github.com/go-pg/pg/orm",
+    "github.com/itsjamie/gin-cors",
+    "gopkg.in/go-playground/validator.v8",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1
